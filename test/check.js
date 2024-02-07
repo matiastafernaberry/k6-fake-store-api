@@ -17,7 +17,7 @@ export const options = {
 };
 
 export default function () {
-  const response = http.get("https:paris.cl");
+  const response = http.get("https://www.paris.cl");
 
   check(response, {
     "statusCode is 200": (r) => r.status === 200,
