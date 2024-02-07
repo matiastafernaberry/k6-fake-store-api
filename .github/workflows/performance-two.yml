@@ -10,7 +10,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v1
   
-        - name: Run local k6 test
+        - name: Run local k6 test 2
           uses: grafana/k6-action@v0.2.0
           with:
             filename: test/check.js
