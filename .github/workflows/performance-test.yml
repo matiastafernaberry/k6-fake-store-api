@@ -2,7 +2,7 @@ on:
   push:
     branches: [master]
 jobs:
-  k6_perfomance_test:
+  job1:
     name: k6 test
     runs-on: ubuntu-latest
 
@@ -14,3 +14,8 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: test/check.js
+      - name: Run local k6 test two
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: test/check.js
+          
