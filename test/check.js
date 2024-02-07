@@ -2,7 +2,7 @@ import { check } from "k6";
 import http from "k6/http";
 
 export const options = {
-  vus: 20,
+  vus: 100,
   duration: "20s",
   thresholds: {
     http_req_failed: ["rate<0.1"],
@@ -17,7 +17,7 @@ export const options = {
 };
 
 export default function () {
-  const response = http.get("https://fierce-brook-83918.herokuapp.com/api/v1/products");
+  const response = http.get("https:paris.cl");
 
   check(response, {
     "statusCode is 200": (r) => r.status === 200,
